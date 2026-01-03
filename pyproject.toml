@@ -1,0 +1,38 @@
+{\rtf1\ansi\ansicpg1251\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 [tool.poetry]\
+name = "validation-series-quant"\
+version = "0.1.0"\
+description = "Reproducible mini-projects behind my LinkedIn Validation Series."\
+authors = ["Alexey Mengden"]\
+license = "MIT"\
+readme = "README.md"\
+packages = [\{ include = "validation_series_quant", from = "src" \}]\
+\
+[tool.poetry.dependencies]\
+python = ">=3.11,<3.13"\
+numpy = "^1.26"\
+pandas = "^2.2"\
+scikit-learn = "^1.5"\
+\
+[tool.poetry.group.dev.dependencies]\
+pytest = "^8.3"\
+ruff = "^0.6"\
+\
+[tool.pytest.ini_options]\
+testpaths = ["tests"]\
+addopts = "-q"\
+\
+[tool.ruff]\
+line-length = 100\
+target-version = "py311"\
+extend-select = ["E", "F", "I"]\
+\
+[build-system]\
+requires = ["poetry-core>=1.9.0"]\
+build-backend = "poetry.core.masonry.api"}
