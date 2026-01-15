@@ -62,7 +62,12 @@ def auc_standard(y_true: ArrayLike, y_score: ArrayLike, *, dropna: bool = True) 
     return float(roc_auc_score(y, s))
 
 
-def conservative_ties_correction(y_true: ArrayLike, y_score: ArrayLike, *, dropna: bool = True) -> float:
+def conservative_ties_correction(
+        y_true: ArrayLike,
+        y_score: ArrayLike,
+        *,
+        dropna: bool = True
+) -> float:
     """
     Conservative ties correction based on tie groups:
 
